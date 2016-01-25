@@ -21,6 +21,8 @@ gem 'jbuilder', '~> 2.0'
 # Use Puma as the app server
 gem 'puma'
 
+#- gem 'rack-cors', require: 'rack/cors'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -41,11 +43,15 @@ group :development do
   gem 'rubocop', require: false
   gem 'guard', require: false
   gem 'guard-rubocop', require: false
-  gem 'guard-rspec', require: false
 end
 
 group :test do
-  gem 'rspec-rails', require: false
+  # gem 'rspec-rails', require: false # Just need this when rspec 3.5.0 is released
+  gem 'rspec-core', require: false, git: 'git@github.com:rspec/rspec-core.git'
+  gem 'rspec-support', require: false, git: 'git@github.com:rspec/rspec-support.git'
+  gem 'rspec-expectations', require: false, git: 'git@github.com:rspec/rspec-expectations.git'
+  gem 'rspec-mocks', require: false, git: 'git@github.com:rspec/rspec-mocks.git'
+  gem 'rspec-rails', require: false, git: 'git@github.com:rspec/rspec-rails.git'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

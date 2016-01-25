@@ -3,4 +3,10 @@ Rails.application.routes.draw do
 
   # Serve websocket cable requests in-process
   # mount ActionCable.server => '/cable'
+
+  namespace :api do
+    namespace :v1 do
+      resources :slack, only: :create
+    end
+  end
 end
