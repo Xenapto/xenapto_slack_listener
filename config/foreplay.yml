@@ -11,6 +11,7 @@ production:
   web:
     env:
       WEB_TIMEOUT: 300
+      SECRET_KEY_BASE: e257fb0cf5cce0304cffd679c4949084694742c16a1ce5f7f518c7a9184539a80bec8c5fae59ed1048a99308b2b0ac42477b512ab0895c7cd5ca8166258937f9
     foreman:
       concurrency: 'web=1'
     servers:
