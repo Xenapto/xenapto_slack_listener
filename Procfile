@@ -1,1 +1,1 @@
-web: script/rails server
+web: bin/rails server -p $PORT
