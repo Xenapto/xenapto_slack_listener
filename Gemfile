@@ -32,6 +32,7 @@ gem 'puma'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+  gem 'foreplay', require: false # Deploy to Ubuntu/Debian environment (, path: '../foreplay')
 end
 
 group :development do

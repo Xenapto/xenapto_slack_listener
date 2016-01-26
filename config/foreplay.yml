@@ -1,0 +1,17 @@
+---
+defaults:
+  keyfile: ~/.ssh/id_circleci_github
+  path: apps/%a
+  repository: git@github.com:Xenapto/xenapto_slack_listener.git
+  user: xenapto
+
+production:
+  defaults:
+    branch: develop # master
+  web:
+    env:
+      WEB_TIMEOUT: 300
+    foreman:
+      concurrency: 'web=1'
+    servers:
+      - jayasuriya.xenapto.net
